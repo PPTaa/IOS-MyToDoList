@@ -30,9 +30,15 @@ class MockDataManager {
 }
 
 extension MockDataManager: DataManagerProtocol {
-    func add(myToDo: MyToDo) {
+    func addMyToDo(title: String) {
+        let myToDo = MyToDo(title: title)
         myToDos.insert(myToDo, at: 0)
     }
+    
+//    func add(myToDo: MyToDo) {
+//        myToDos.insert(myToDo, at: 0)
+//    }
+    
     func fetchMyToDoList(includingCompleted: Bool = false) -> [MyToDo] {
         includingCompleted ? myToDos : myToDos.filter { !$0.isCompleted }
     }

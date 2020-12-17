@@ -13,7 +13,11 @@ final class MyToDoListViewModel: ObservableObject {
     
     //이 두 변수중 어느것이라도 변화가 감지되면 뷰를 업데이트 시키도록 published를 사용
     @Published var myToDos = [MyToDo]()
-    @Published var showCompleted = false
+    @Published var showCompleted = false {
+        didSet {
+            fetchMyToDos()
+        }
+    }
     
     var dataManager: DataManagerProtocol
     
@@ -38,6 +42,7 @@ protocol MyToDoListViewModelProtocol {
 extension MyToDoListViewModel: MyToDoListViewModelProtocol {
     func toggleIsCompleted(for myToDo: MyToDo) {
         dataManager.toggleIsCompleted(for: myToDo)
+        fetchMyToDos()
     }
     
     func fetchMyToDos() {

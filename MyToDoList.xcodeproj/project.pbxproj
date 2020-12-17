@@ -16,6 +16,10 @@
 		D030CB002589CA6B0026A7DD /* MyToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030CAFF2589CA6B0026A7DD /* MyToDoListViewModel.swift */; };
 		D030CB032589D0B50026A7DD /* MyToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030CB022589D0B50026A7DD /* MyToDoListView.swift */; };
 		D030CB062589D4100026A7DD /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030CB052589D4100026A7DD /* MockDataManager.swift */; };
+		D070C077258B3BDE0033F582 /* MyToDoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070C076258B3BDE0033F582 /* MyToDoRow.swift */; };
+		D0E7587E2589E52B00A03733 /* NewMyToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E7587D2589E52B00A03733 /* NewMyToDoViewModel.swift */; };
+		D0E758822589E8F500A03733 /* NewMyToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E758812589E8F500A03733 /* NewMyToDoView.swift */; };
+		D0E758862589FD5200A03733 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E758852589FD5200A03733 /* KeyboardResponder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		D030CAFF2589CA6B0026A7DD /* MyToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToDoListViewModel.swift; sourceTree = "<group>"; };
 		D030CB022589D0B50026A7DD /* MyToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToDoListView.swift; sourceTree = "<group>"; };
 		D030CB052589D4100026A7DD /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
+		D070C076258B3BDE0033F582 /* MyToDoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToDoRow.swift; sourceTree = "<group>"; };
+		D0E7587D2589E52B00A03733 /* NewMyToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMyToDoViewModel.swift; sourceTree = "<group>"; };
+		D0E758812589E8F500A03733 /* NewMyToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMyToDoView.swift; sourceTree = "<group>"; };
+		D0E758852589FD5200A03733 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,9 @@
 		D030CAE82589A36D0026A7DD /* MyToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				D070C079258B3BE70033F582 /* MyToDoRow */,
+				D0E758882589FD5A00A03733 /* Keyboard */,
+				D0E758802589E8D000A03733 /* NewMyToDo */,
 				D030CB0B2589DE4C0026A7DD /* Model */,
 				D030CB0A2589DE410026A7DD /* Managers */,
 				D030CB092589DE200026A7DD /* MyToDoList */,
@@ -114,6 +125,31 @@
 				D030CAF92589A52C0026A7DD /* MyToDo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D070C079258B3BE70033F582 /* MyToDoRow */ = {
+			isa = PBXGroup;
+			children = (
+				D070C076258B3BDE0033F582 /* MyToDoRow.swift */,
+			);
+			path = MyToDoRow;
+			sourceTree = "<group>";
+		};
+		D0E758802589E8D000A03733 /* NewMyToDo */ = {
+			isa = PBXGroup;
+			children = (
+				D0E7587D2589E52B00A03733 /* NewMyToDoViewModel.swift */,
+				D0E758812589E8F500A03733 /* NewMyToDoView.swift */,
+			);
+			path = NewMyToDo;
+			sourceTree = "<group>";
+		};
+		D0E758882589FD5A00A03733 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D0E758852589FD5200A03733 /* KeyboardResponder.swift */,
+			);
+			path = Keyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,11 +221,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E758822589E8F500A03733 /* NewMyToDoView.swift in Sources */,
 				D030CB032589D0B50026A7DD /* MyToDoListView.swift in Sources */,
+				D070C077258B3BDE0033F582 /* MyToDoRow.swift in Sources */,
 				D030CAFA2589A52C0026A7DD /* MyToDo.swift in Sources */,
+				D0E758862589FD5200A03733 /* KeyboardResponder.swift in Sources */,
 				D030CB002589CA6B0026A7DD /* MyToDoListViewModel.swift in Sources */,
 				D030CB062589D4100026A7DD /* MockDataManager.swift in Sources */,
 				D030CAFD2589A5E50026A7DD /* DataManager.swift in Sources */,
+				D0E7587E2589E52B00A03733 /* NewMyToDoViewModel.swift in Sources */,
 				D030CAEC2589A36D0026A7DD /* ContentView.swift in Sources */,
 				D030CAEA2589A36D0026A7DD /* MyToDoListApp.swift in Sources */,
 			);
