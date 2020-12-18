@@ -8,7 +8,9 @@
 import Foundation
 
 class DataManager {
+    
     static let shared: DataManagerProtocol = DataManager()
+    // MyToDo 타입의 빈배열을 생성 (타입은 배열)
     private var myToDos = [MyToDo]()
     private init(){ }
 }
@@ -31,7 +33,7 @@ extension DataManagerProtocol {
 }
 
 extension DataManager: DataManagerProtocol {
-    
+    // todoList들을 받음 includingCompleted의 값에 따라 필터링이 된 리스트를 반환
     func fetchMyToDoList(includingCompleted: Bool = false) -> [MyToDo] {
         includingCompleted ? myToDos : myToDos.filter{!$0.isCompleted}
     }
@@ -39,6 +41,7 @@ extension DataManager: DataManagerProtocol {
 //    func add(myToDo: MyToDo) {
 //        myToDos.insert(myToDo, at: 0)
 //    }
+    // title을 받아서 MyToDo객체를 생성하고, 그것을 myToDos 리스트 0번에 저장
     func addMyToDo(title: String) {
         let myToDo = MyToDo(title: title)
         myToDos.insert(myToDo, at: 0)
